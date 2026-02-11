@@ -37,9 +37,9 @@ document.querySelectorAll(".events button")[0].addEventListener("click",function
 
 document.querySelectorAll(".events button")[1].addEventListener("click",function(){
     const sampleEvents=[
-        {title:"Tech Conference 2026",date:"2026-03-15",cat:"Conference",desc:"Annual tech conference with industry leaders"},
+        {title:"Tech Conference 2026",date:"2026-03-15",cat:"Conference",desc:"Annual tech conference"},
         {title:"JavaScript Workshop",date:"2026-02-20",cat:"Workshop",desc:"Learn advanced JavaScript concepts"},
-        {title:"Dev Meetup",date:"2026-02-25",cat:"Meetup",desc:"Network with local developers"}
+        {title:"Dev Meetup",date:"2026-02-25",cat:"Meetup",desc:"meet with local developers"}
     ]
     sampleEvents.forEach(event=>{
         const card=document.createElement("div")
