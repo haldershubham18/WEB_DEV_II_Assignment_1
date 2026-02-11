@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2> 🎯 Smart Event Dashboard</h2>
+        </header>
+        
+        <div class="eventForm">
+            <form id="form">
+                <lable for="eventTitle">EventTitle</lable>
+                <input type="text" id="eventTitle" name="eventTitle" required><br>
+                <lable for="eventDate">EventDate</lable>
+                <input type="date" id="eventDate" name="eventDate" required><br>
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="Conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="Meetup">Meetup</option>
+                    <option value="Webniar">Webinar</option>
+                    <option value="Social">Social</option>
+                </select><br>
+                <label for="description">Description</label><br>
+                <textarea id="description"></textarea><br>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+        <div class="events">
+            <button>Clear All Events</button>
+            <button> Add Sample Events</button>
+            <div class ="card"></div>
+        </div>
+        <div>
+            You pressed: <div class="key"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
