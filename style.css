@@ -1,4 +1,4 @@
- .card{
+ /* .card{
     background-color: beige;
     width: 200px;
     position: relative;
@@ -15,4 +15,215 @@
     display: flex;
     align-items: center;
     justify-content: center
+} */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e0f2fe;
+    padding: 20px;
+    color: #334155;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+}
+
+
+.container > header {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container > header h2 {
+    color: #6366f1;
+    font-size: 1.8rem;
+}
+
+
+.eventForm {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.eventForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventForm label,
+.eventForm lable {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.eventForm input,
+.eventForm select,
+.eventForm textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.eventForm textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.eventForm button {
+    margin-top: 20px;
+    background-color: #6366f1;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.eventForm button:hover {
+    background-color: #4f46e5;
+}
+
+
+.events {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.events > button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.events > button:hover {
+    background-color: #4f46e5;
+}
+
+
+.events > .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+
+.events > .card > .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+
+.events > .card > .card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.events > .card > .card h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 8px;
+    padding-right: 25px;
+}
+
+.events > .card > .card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 5px 0;
+}
+
+.events > .card > .card button {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+
+.events > .card > .card .deleteCard {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: #fee2e2;
+    color: #ef4444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.events > .card > .card .deleteCard:hover {
+    background: #ef4444;
+    color: white;
+}
+
+
+.container > div:last-child {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.key {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #6366f1;
+    border: 1px solid #cbd5e1;
+    min-width: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .events > button {
+        width: 100%;
+        margin-right: 0;
+    }
 }
